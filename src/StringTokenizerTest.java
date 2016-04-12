@@ -3,6 +3,8 @@
  * @date: 08.04.2016
  * @use: StringTokenizer test cases
  */
+import static org.junit.Assert.assertEquals;
+
 import java.util.NoSuchElementException;
 import java.util.StringTokenizer;
 
@@ -32,5 +34,11 @@ public class StringTokenizerTest {
 			st.nextToken();
 		}
 		st.nextToken();
+	}
+	
+	@Test
+	public void countTokensTest() {
+		//Assert
+		assertEquals("CountToken should return the number 4",4,st.countTokens());
 	}
 }
