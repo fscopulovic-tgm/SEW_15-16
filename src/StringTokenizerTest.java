@@ -3,15 +3,24 @@
  * @date: 08.04.2016
  * @use: StringTokenizer test cases
  */
-import static org.junit.Assert.*;
+import java.util.StringTokenizer;
 
 import org.junit.Test;
 
 public class StringTokenizerTest {
 
-	@Test
-	public void test() {
-		fail("Not yet implemented");
+	//Assign
+	StringTokenizer st;
+	
+	public StringTokenizerTest() {
+		st = new StringTokenizer("this is a test");
 	}
-
+	
+	@Test
+	public void outputTest() {	
+		//Act
+		while (st.hasMoreTokens()) {
+			System.out.println(st.nextToken());
+		}
+	}
 }
