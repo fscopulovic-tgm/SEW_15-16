@@ -56,4 +56,16 @@ public class StringTokenizerTest {
 		
 		System.out.print("Number of tokens in hilfe: "+i+"\n As we see now StringTokenizer does not seperate by '-', it only seperates by space");
 	}
+	
+	@Test
+	public void lineFeedTest() {
+		//Assign
+		StringTokenizer hilfe = new StringTokenizer("this\nis\na\ntest");
+		
+		//Assert
+		assertEquals("this",hilfe.nextToken());
+		assertEquals("is",hilfe.nextToken());
+		assertEquals("a",hilfe.nextToken());
+		assertEquals("test",hilfe.nextToken());
+	}
 }
