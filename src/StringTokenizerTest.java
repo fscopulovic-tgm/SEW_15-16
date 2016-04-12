@@ -68,4 +68,16 @@ public class StringTokenizerTest {
 		assertEquals("a",hilfe.nextToken());
 		assertEquals("test",hilfe.nextToken());
 	}
+	
+	@Test
+	public void formFeedTest() {
+		//Assign
+		StringTokenizer hilfe = new StringTokenizer("this\fis\fa\ftest");
+				
+		//Assert
+		assertEquals("this",hilfe.nextToken());
+		assertEquals("is",hilfe.nextToken());
+		assertEquals("a",hilfe.nextToken());
+		assertEquals("test",hilfe.nextToken());
+	}
 }
