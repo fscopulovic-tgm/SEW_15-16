@@ -3,6 +3,7 @@
  * @date: 08.04.2016
  * @use: StringTokenizer test cases
  */
+import java.util.NoSuchElementException;
 import java.util.StringTokenizer;
 
 import org.junit.Test;
@@ -24,4 +25,12 @@ public class StringTokenizerTest {
 		}
 	}
 	
+	@Test(expected = NoSuchElementException.class)
+	public void noSuchElementTest() {
+		//Act	
+		while (st.hasMoreTokens()) {
+			st.nextToken();
+		}
+		st.nextToken();
+	}
 }
