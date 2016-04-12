@@ -80,4 +80,16 @@ public class StringTokenizerTest {
 		assertEquals("a",hilfe.nextToken());
 		assertEquals("test",hilfe.nextToken());
 	}
+	
+	@Test
+	public void carraigeReturnTest() {
+		//Assign
+		StringTokenizer hilfe = new StringTokenizer("this\ris\ra\rtest");
+				
+		//Assert
+		assertEquals("this",hilfe.nextToken());
+		assertEquals("is",hilfe.nextToken());
+		assertEquals("a",hilfe.nextToken());
+		assertEquals("test",hilfe.nextToken());
+	}
 }
