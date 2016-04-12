@@ -41,4 +41,19 @@ public class StringTokenizerTest {
 		//Assert
 		assertEquals("CountToken should return the number 4",4,st.countTokens());
 	}
+	
+	@Test
+	public void specialCharacterTest() {
+		//Assign
+		StringTokenizer hilfe = new StringTokenizer("this-is-a-test");
+		int i = 0;
+		
+		//Act
+		while(hilfe.hasMoreTokens()) {
+			System.out.println(hilfe.nextToken());
+			i++;
+		}
+		
+		System.out.print("Number of tokens in hilfe: "+i+"\n As we see now StringTokenizer does not seperate by '-', it only seperates by space");
+	}
 }
